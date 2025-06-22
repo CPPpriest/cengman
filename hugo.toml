@@ -1,7 +1,6 @@
 baseURL = 'https://cengman.netlify.app'
 languageCode = 'en-us'
 title = 'CENGMAN - METU CENG Manual'
-theme = 'cengman-theme'
 
 [params]
   description = "Collaborative manual and knowledge base for METU Computer Engineering students"

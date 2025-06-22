@@ -1,9 +1,0 @@
-name = "CENGMAN Theme"
-description = "A clean theme for METU CENG manual and knowledge base"
-homepage = "https://github.com/your-org/cengman"
-tags = ["documentation", "knowledge-base", "clean"]
-features = ["responsive"]
-min_version = "0.80.0"
-
-[author]
-  name = "METU CENG Students" 

@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="section-content">
+    <header>
+        <h1>{{ .Title }}</h1>
+        {{ if .Content }}
+        <div class="section-description">
+            {{ .Content }}
+        </div>
+        {{ end }}
+    </header>
+    
+    {{ if .Pages }}
+    <div class="articles-list">
+        {{ range .Pages }}
+        <article class="article-preview">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ if .Params.author }}
+            <p class="author">By {{ .Params.author }}</p>
+            {{ end }}
+            {{ if .Date }}
+            <p class="date">{{ .Date.Format "January 2, 2006" }}</p>
+            {{ end }}
+            {{ if .Summary }}
+            <p class="summary">{{ .Summary }}</p>
+            {{ end }}
+            {{ if .Params.tags }}
+            <div class="tags">
+                {{ range .Params.tags }}
+                <span class="tag">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+            <div class="article-actions">
+                <a href="{{ .RelPermalink }}" class="read-article-btn">Read Article →</a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+{{ end }} 

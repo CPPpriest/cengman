@@ -1,0 +1,35 @@
+baseURL = 'https://cengman.netlify.app'
+languageCode = 'en-us'
+title = 'CENGMAN - METU CENG Manual'
+theme = 'cengman-theme'
+
+[params]
+  description = "Collaborative manual and knowledge base for METU Computer Engineering students"
+  author = "METU CENG Students"
+
+[menu]
+  [[menu.main]]
+    name = "Department"
+    url = "/department/"
+    weight = 10
+  [[menu.main]]
+    name = "Internships"
+    url = "/internships/"
+    weight = 20
+  [[menu.main]]
+    name = "Exchange"
+    url = "/exchange/"
+    weight = 30
+  [[menu.main]]
+    name = "Masters"
+    url = "/masters/"
+    weight = 40
+  [[menu.main]]
+    name = "Articles"
+    url = "/articles/"
+    weight = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

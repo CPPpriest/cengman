@@ -1,0 +1,29 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>{{ .Site.Title }}</h3>
+                <p>{{ .Site.Params.description }}</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Sections</h3>
+                <ul>
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contribute</h3>
+                <p>Created and maintained by METU CENG students.</p>
+                <p><strong>Questions or suggestions?</strong> Open an issue or contact the maintainers.</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. Inspired by the desire to help fellow students succeed.</p>
+        </div>
+    </div>
+</footer> 

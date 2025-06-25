@@ -1,7 +1,7 @@
 ---
 title: "Ömer Kılınç"
 description: "Founder and main maintainer of CENGMAN, passionate about creating resources for METU Computer Engineering students."
-photo: "/assets/contributors/priest.jpeg"
+photo: "/images/priest.jpeg"
 github: "priest"
 linkedin: "https://linkedin.com/in/omer-kilinc"
 website: "https://kilinc.cv"

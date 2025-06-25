@@ -36,17 +36,6 @@
     </div>
     {{ end }}
 </div>
-{{ else }}
-<ul>
-    {{ range .Pages }}
-    <li>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ if .Summary }}
-        <p>{{ .Summary }}</p>
-        {{ end }}
-    </li>
-    {{ end }}
-</ul>
 {{ end }}
 
 {{ end }} 

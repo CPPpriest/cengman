@@ -1,8 +1,52 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
+
 {{ if .Content }}
 <div class="content">
     {{ .Content }}
 </div>
 {{ end }}
+
+{{ if eq .Section "contributors" }}
+<div class="contributors-grid">
+    {{ range .Pages }}
+    <div class="contributor-card">
+        <div class="contributor-photo">
+            {{ if .Params.photo }}
+            <img src="{{ .Params.photo }}" alt="{{ .Title }}" />
+            {{ else }}
+            <div class="default-avatar">{{ substr .Title 0 1 }}</div>
+            {{ end }}
+        </div>
+        <div class="contributor-info">
+            <h3 class="contributor-name">{{ .Title }}</h3>
+            <p class="contributor-description">{{ .Params.description | default .Summary }}</p>
+            <div class="contributor-links">
+                {{ if .Params.linkedin }}
+                <a href="{{ .Params.linkedin }}" target="_blank" class="link-btn linkedin">LinkedIn</a>
+                {{ end }}
+                {{ if .Params.github }}
+                <a href="https://github.com/{{ .Params.github }}" target="_blank" class="link-btn github">GitHub</a>
+                {{ end }}
+                {{ if .Params.website }}
+                <a href="{{ .Params.website }}" target="_blank" class="link-btn website">Website</a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ else }}
+<ul>
+    {{ range .Pages }}
+    <li>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ if .Summary }}
+        <p>{{ .Summary }}</p>
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+
 {{ end }} 

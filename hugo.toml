@@ -1,6 +1,6 @@
 baseURL = 'https://cengman.netlify.app'
 languageCode = 'en-us'
-title = 'CENGMAN - METU CENG Manual'
+title = 'METU CENG MANUAL'
 
 [params]
   description = "Collaborative manual and knowledge base for METU Computer Engineering students"
@@ -27,6 +27,10 @@ title = 'CENGMAN - METU CENG Manual'
     name = "Articles"
     url = "/articles/"
     weight = 50
+  [[menu.main]]
+    name = "Contributors"
+    url = "/contributors/"
+    weight = 60
 
 [markup]
   [markup.goldmark]
